@@ -1,0 +1,50 @@
+.menuPane{
+    -fx-background-color: #404C5A;
+
+}
+
+.root{
+    -fx-background-color:  white;
+    -fx-min-width: 1400;
+    -fx-min-height: 655;
+
+}
+
+.manager-anchor-pane{
+    -fx-background-color: #404C5A;
+
+}
+
+.management-button{
+    -fx-background-color: #F3AB71;
+    -fx-font-family: "Calibri Light";
+    -fx-text-fill: white;
+    -fx-font-size: 13;
+}
+
+.homework-table-column{
+
+
+    -fx-text-fill: white;
+    -fx-border-color: white;
+    -fx-border: 1px;
+    -fx-font-size: 13;
+    -fx-font-family: Lucida Console;
+
+}
+
+.homework-table .column-header{
+    -fx-background-color: #F3AB71;
+}
+
+.homework-table{
+    -fx-background-color: transparent;
+
+}
+
+.homework-table .column-header .label{
+    -fx-background-color: transparent;
+}
+.homework-table .table-cell{
+    -fx-background-color: #404C5A;
+}

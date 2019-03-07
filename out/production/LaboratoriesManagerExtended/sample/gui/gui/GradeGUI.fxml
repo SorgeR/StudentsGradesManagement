@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="655.0" prefWidth="1400.0" stylesheets="@../css/GradeGUIStyle.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.gui.controller.GradeController">
+    <children>
+        <AnchorPane fx:id="menuPane" layoutX="19.0" layoutY="19.0" minWidth="205.0" prefHeight="511.0" prefWidth="205.0" styleClass="menuPane" stylesheets="@../css/StudentGUIStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox layoutY="164.0" style="-fx-background-color: #404C5A;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <children>
+                        <Button fx:id="studentGoButton" ellipsisString="" mnemonicParsing="false" onAction="#goToStudents" prefHeight="39.0" prefWidth="205.0" styleClass="menuButton" text=" Students                   " textFill="WHITE" textOverrun="CLIP">
+                            <font>
+                                <Font name="Cambria Bold" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="homeworkGoButton" mnemonicParsing="false" onAction="#goToHomework" prefHeight="39.0" prefWidth="205.0" styleClass="menuButton" text="       Homeworks                    " textOverrun="CLIP" wrapText="true">
+                            <font>
+                                <Font name="Calibri Light" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="gradeGoButton" mnemonicParsing="false" prefHeight="39.0" prefWidth="205.0" styleClass="menuButton" text="    Grades                         " />
+                        <Button fx:id="exemptionGoButton" mnemonicParsing="false" onAction="#goToExemptions" prefHeight="39.0" prefWidth="205.0" styleClass="menuButton" text="           Exemptions                        " />
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+        <TableView fx:id="tableView" layoutX="214.0" layoutY="11.0" prefHeight="279.0" prefWidth="777.0">
+            <styleClass>
+                <String fx:value="grade-table" />
+                <String fx:value="grade-table" />
+            </styleClass>
+        </TableView>
+        <Pagination fx:id="pagination" layoutX="213.0" layoutY="11.0" prefHeight="343.0" prefWidth="777.0" />
+        <AnchorPane layoutX="955.0" layoutY="13.0" prefHeight="295.0" prefWidth="318.0" styleClass="anchorPane">
+            <children>
+                <Text fill="WHITE" layoutX="108.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filters">
+                    <font>
+                        <Font name="Lucida Console" size="24.0" />
+                    </font>
+                </Text>
+                <VBox layoutX="20.0" layoutY="60.0" prefHeight="200.0" prefWidth="257.0" spacing="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                    <children>
+                        <TextField fx:id="studentNameTextField" prefHeight="39.0" prefWidth="231.0" promptText="Student name..." />
+                        <ComboBox fx:id="homeworkComboBox" prefHeight="39.0" prefWidth="399.0" />
+                        <ComboBox fx:id="groupComboBox" prefHeight="39.0" prefWidth="363.0" />
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="955.0" layoutY="328.0" prefHeight="319.0" prefWidth="318.0" styleClass="anchorPane">
+            <children>
+                <Text fill="WHITE" layoutX="110.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reports">
+                    <font>
+                        <Font name="Lucida Console" size="24.0" />
+                    </font>
+                </Text>
+                <VBox layoutX="22.0" layoutY="72.0" prefWidth="278.0" spacing="20.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="18.0">
+                    <children>
+                        <Button fx:id="exportPassedNotPassedToPdf" mnemonicParsing="false" onAction="#exportPassedNotPassedButtonHandler" prefHeight="39.0" prefWidth="304.0" styleClass="management-button" text="Passed/Not Passed Students" />
+                        <Button fx:id="exportTop30ToPdf" mnemonicParsing="false" onAction="#exportTop30ButtonHandler" prefHeight="39.0" prefWidth="344.0" styleClass="management-button" text="Top 30 Students" />
+                        <Button fx:id="exportTopTeachersToPdf" mnemonicParsing="false" onAction="#exportTopTeachersButtonHandler" prefHeight="39.0" prefWidth="329.0" styleClass="management-button" text="Top teachers" />
+                        <Button fx:id="exportTopHardestHomeworkToPdf" mnemonicParsing="false" onAction="#exportTopHardestHomeworkToPdf" prefHeight="39.0" prefWidth="395.0" styleClass="management-button" text="Top hardest homeworks" />
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+      <HBox layoutX="227.0" layoutY="354.0" prefHeight="295.0" prefWidth="700.0">
+         <children>
+              <PieChart fx:id="passedNotPassedPieChart" prefHeight="295.0" prefWidth="350.0" />
+            <PieChart fx:id="homeworkAverageGradePieChart" labelLineLength="0.0" prefHeight="279.0" prefWidth="350.0" />
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>

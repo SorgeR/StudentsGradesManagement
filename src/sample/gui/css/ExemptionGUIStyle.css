@@ -1,0 +1,50 @@
+.menuPane{
+    -fx-background-color: #404C5A;
+
+}
+
+.root {
+    -fx-background-color: white;
+    -fx-min-width: 1400;
+    -fx-min-height: 655;
+}
+.anchorPane{
+    -fx-background-color: #404C5A;
+
+}
+
+
+.exemption-table{
+    -fx-background-color: transparent;
+    -fx-selection-bar: red;
+}
+
+.exemption-table .column-header .label{
+    -fx-background-color: transparent;
+}
+.exemption-table .table-cell{
+    -fx-background-color: #404C5A;
+}
+
+
+.exemption-table-column{
+
+
+    -fx-text-fill: white;
+    -fx-border-color: white;
+    -fx-border: 1px;
+    -fx-font-size: 13;
+    -fx-font-family: Lucida Console;
+
+}
+
+.exemption-table .column-header{
+    -fx-background-color: #F3AB71;
+}
+
+.management-button{
+    -fx-background-color: #F3AB71;
+    -fx-font-family: "Calibri Light";
+    -fx-text-fill: white;
+    -fx-font-size: 14;
+}

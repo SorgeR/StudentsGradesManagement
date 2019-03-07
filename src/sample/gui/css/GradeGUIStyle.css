@@ -1,0 +1,53 @@
+.menuPane{
+    -fx-background-color: #404C5A;
+
+}
+
+.root {
+    -fx-background-color: white;
+    -fx-min-width: 1400;
+    -fx-min-height: 655;
+}
+
+
+.grade-table-column{
+
+
+    -fx-text-fill: white;
+    -fx-border-color: white;
+    -fx-border: 1px;
+    -fx-font-size: 13;
+    -fx-font-family: Lucida Console;
+
+}
+
+.grade-table .column-header{
+    -fx-background-color: #F3AB71;
+}
+
+.management-button{
+    -fx-background-color: #F3AB71;
+    -fx-font-family: "Calibri Light";
+    -fx-text-fill: white;
+    -fx-font-size: 15;
+
+}
+
+
+.grade-table{
+    -fx-background-color: transparent;
+
+}
+
+.grade-table .column-header .label{
+    -fx-background-color: transparent;
+}
+.grade-table .table-cell{
+    -fx-background-color: #404C5A;
+}
+#grade-table-cell .table-row-cell:selected{
+    -fx-background-color: blue;
+}
+.anchorPane{
+    -fx-background-color: #404C5A;
+}
